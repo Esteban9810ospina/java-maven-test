@@ -1,0 +1,21 @@
+<assembly xmlns="http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.6"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.6 http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.6.xsd">
+
+    <id>build-my-widgetset-jar</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${basedir}/src/main/webapp/VAADIN/widgetsets</directory>
+            <outputDirectory>${basedir}/src/main/webapp/VAADIN/widgetsets</outputDirectory>
+            <excludes>
+                <exclude>WEB-INF/</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>

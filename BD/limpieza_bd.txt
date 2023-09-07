@@ -1,0 +1,14 @@
+TRUNCATE TABLE au_adjudicacion;
+TRUNCATE TABLE au_CrearAceptacion;
+TRUNCATE TABLE au_IpAutorizada;
+TRUNCATE TABLE au_Parametrizacion;
+TRUNCATE TABLE au_reporteUsuario;
+TRUNCATE TABLE au_usuario;
+TRUNCATE TABLE dm_reporteUsuario;
+TRUNCATE TABLE fqs_auditoria;
+TRUNCATE TABLE fqs_logusuariosadmin;
+TRUNCATE TABLE fqs_CrearAceptacion;
+TRUNCATE TABLE fqs_Parametrizacion;
+TRUNCATE TABLE fqs_usuario_password_historial;
+UPDATE seq SET val='0' WHERE name='dm_formulario';
+ALTER TABLE au_CrearAceptacion AUTO_INCREMENT = 1;

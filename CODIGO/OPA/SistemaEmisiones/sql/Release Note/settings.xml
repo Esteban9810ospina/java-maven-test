@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+   
+    <server>
+      <id>snapshots</id>
+      <username>maven</username>
+      <password>maven</password>
+    </server>
+    <server>
+      <id>releases</id>
+      <username>maven</username>
+      <password>maven</password>
+    </server>
+    <server>
+      <id>deploy</id>
+      <username>quasar</username>
+      <password>quasar</password>
+    </server>
+  </servers>
+  <mirrors>
+ 
+  </mirrors>
+  <profiles>
+        <!--Build properties-->
+    <profile>
+      <id>base</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <scm.repository.url>git</scm.repository.url>
+
+        <!--        Libs versions-->
+        <spring.version>3.1.1.RELEASE</spring.version>
+        <spring.security.version>3.1.1.RELEASE</spring.security.version>
+    <!-- Plugin versions -->
+        <aspectj.version>1.6.11</aspectj.version>
+        <aspectj.source.version>1.6</aspectj.source.version>
+        <aspectj.target.version>1.6</aspectj.target.version>
+        <aspectj-maven-plugin.version>1.4</aspectj-maven-plugin.version>
+
+        <jee.web.version>6.0</jee.web.version>
+        <slf4j.log4j.version>1.5.6</slf4j.log4j.version>
+        <slf4j.log4j.api.version>1.5.6</slf4j.log4j.api.version>
+        <apache.log4j.version>1.2.15</apache.log4j.version>
+        <commons.logging.version>1.1.1</commons.logging.version>
+        <junit.version>4.10</junit.version>
+        
+      </properties>
+    </profile> 
+  </profiles>
+  
+</settings>
+
+

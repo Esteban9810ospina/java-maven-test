@@ -1,0 +1,533 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.11 built on Tuesday Mar 15, 2011 at 15:31:04 GMT
+---- Dump Properties ---
+Dump file: ajcore.20190207.111647.668.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getSuperclass(BcelObjectType.java:231)
+	at org.aspectj.weaver.ReferenceType.getSuperclass(ReferenceType.java:906)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.matches(ExactAnnotationTypePattern.java:155)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.matches(ExactAnnotationTypePattern.java:96)
+	at org.aspectj.weaver.patterns.AnyWithAnnotationTypePattern.matchesExactly(AnyWithAnnotationTypePattern.java:55)
+	at org.aspectj.weaver.patterns.TypePattern.matchesStatically(TypePattern.java:132)
+	at org.aspectj.weaver.patterns.DeclareParents.match(DeclareParents.java:63)
+	at org.aspectj.weaver.patterns.DeclareParents.findMatchingNewParents(DeclareParents.java:358)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doDeclareParents(AjLookupEnvironment.java:880)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:730)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_171\jre\bin
+java.vm.version=25.171-b11
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=CO
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones
+java.runtime.version=1.8.0_171-b11
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed
+os.arch=amd64
+java.io.tmpdir=C:\Users\catherine_ovalle\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows 10
+maven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar
+classworlds.conf=C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf
+sun.jnu.encoding=Cp1252
+java.library.path=C:\Program Files\Java\jdk1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\apache-maven-3.5.3\bin;C:\Program Files\Git\cmd;C:\Users\catherine_ovalle\AppData\Local\Microsoft\WindowsApps;;.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=10.0
+user.home=C:\Users\catherine_ovalle
+user.timezone=America/Bogota
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=ISO-8859-1
+java.specification.version=1.8
+java.class.path=C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar
+user.name=Catherine_Ovalle
+java.vm.specification.version=1.8
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=ISO-8859-1 --also-make --projects web/framework-web install
+java.home=C:\Program Files\Java\jdk1.8.0_171\jre
+sun.arch.data.model=64
+user.language=es
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_171
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_171\jre\classes
+java.vendor=Oracle Corporation
+maven.home=C:\Program Files\NetBeans 8.2\java\maven
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.desktop=windows
+sun.cpu.isalist=amd64
+---- Command Line ---
+-encoding
+ISO-8859-1
+-source
+1.6
+-target
+1.6
+-classpath
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client\7.5.6\vaadin-client-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-push\7.5.6\vaadin-push-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-server\7.5.6\vaadin-server-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-shared\7.5.6\vaadin-shared-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-widgets\7.5.6\vaadin-widgets-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-themes\7.5.6\vaadin-themes-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client-compiled\7.5.6\vaadin-client-compiled-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client-compiler\7.5.6\vaadin-client-compiler-7.5.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\customfield\1.0.0\customfield-1.0.0.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.core\3.1.1.RELEASE\org.springframework.core-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.context\3.1.1.RELEASE\org.springframework.context-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.aop\3.1.1.RELEASE\org.springframework.aop-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.aspects\3.1.1.RELEASE\org.springframework.aspects-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.jdbc\3.1.1.RELEASE\org.springframework.jdbc-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.web.servlet\3.1.1.RELEASE\org.springframework.web.servlet-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.test\3.1.1.RELEASE\org.springframework.test-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\security\spring-security-web\3.1.1.RELEASE\spring-security-web-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\security\spring-security-config\3.1.1.RELEASE\spring-security-config-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\aspectj\aspectjrt\1.6.11\aspectjrt-1.6.11.jar;C:\Users\catherine_ovalle\.m2\repository\org\aspectj\aspectjtools\1.6.11\aspectjtools-1.6.11.jar;C:\Users\catherine_ovalle\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.6\jcl-over-slf4j-1.6.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar;C:\Users\catherine_ovalle\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\catherine_ovalle\.m2\repository\commons-discovery\commons-discovery\0.2\commons-discovery-0.2.jar;C:\Users\catherine_ovalle\.m2\repository\quartz\quartz\1.5.2\quartz-1.5.2.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addon\confirmdialog\2.1.3\confirmdialog-2.1.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\hsqldb\hsqldb\2.3.3\hsqldb-2.3.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\poi\poi-ooxml\3.6\poi-ooxml-3.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\poi\poi\3.13\poi-3.13.jar;C:\Users\catherine_ovalle\.m2\repository\javax\javaee-web-api\6.0\javaee-web-api-6.0.jar;C:\Users\catherine_ovalle\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar;C:\Users\catherine_ovalle\.m2\repository\javax\el\javax.el-api\2.2.4\javax.el-api-2.2.4.jar;C:\Users\catherine_ovalle\.m2\repository\org\glassfish\javax.servlet\3.0.1\javax.servlet-3.0.1.jar;C:\Users\catherine_ovalle\.m2\repository\net\tanesha\recaptcha4j\recaptcha4j\0.0.7\recaptcha4j-0.0.7.jar;C:\Users\catherine_ovalle\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\core\FrameQ-core\target\FrameQ-core-1.0.0-SNAPSHOT.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\pagedtable\0.6.5\pagedtable-0.6.5.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\addon\tableexport-for-vaadin\1.6.2\tableexport-for-vaadin-1.6.2.jar;C:\Users\catherine_ovalle\.m2\repository\com\google\gwt\gwt-user\2.4.0\gwt-user-2.4.0.jar;C:\Users\catherine_ovalle\.m2\repository\edu\vt\middleware\vt-password\3.1.1\vt-password-3.1.1.jar;C:\Users\catherine_ovalle\.m2\repository\edu\vt\middleware\vt-dictionary\3.0\vt-dictionary-3.0.jar;C:\Users\catherine_ovalle\.m2\repository\edu\vt\middleware\vt-crypt\2.1.4\vt-crypt-2.1.4.jar;C:\Users\catherine_ovalle\.m2\repository\ar\com\fdvs\DynamicJasper\4.0.2\DynamicJasper-4.0.2.jar;C:\Users\catherine_ovalle\.m2\repository\ar\com\fdvs\DynamicJasper-core-fonts\1.0\DynamicJasper-core-fonts-1.0.jar;C:\Users\catherine_ovalle\.m2\repository\axis\axis-wsdl4j\1.2.1\axis-wsdl4j-1.2.1.jar;C:\Users\catherine_ovalle\.m2\repository\com\googlecode\juniversalchardet\juniversalchardet\1.0.3\juniversalchardet-1.0.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\vaadinworker\0.0.6\vaadinworker-0.0.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\pagingcomponent\0.9.6\pagingcomponent-0.9.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\filteringtable\0.9.15.v7\filteringtable-0.9.15.v7.jar;C:\Users\catherine_ovalle\.m2\repository\org\w3c\css\sac\1.3\sac-1.3.jar;C:\Users\catherine_ovalle\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\catherine_ovalle\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA-sources.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-sass-compiler\0.9.12\vaadin-sass-compiler-0.9.12.jar;C:\Users\catherine_ovalle\.m2\repository\org\jsoup\jsoup\1.8.1\jsoup-1.8.1.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\external\flute\flute\1.3.0.gg2\flute-1.3.0.gg2.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\external\streamhtmlparser\streamhtmlparser-jsilver\0.0.10.vaadin1\streamhtmlparser-jsilver-0.0.10.vaadin1.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\external\google\guava\16.0.1.vaadin1\guava-16.0.1.vaadin1.jar;C:\Users\catherine_ovalle\.m2\repository\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Users\catherine_ovalle\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\catherine_ovalle\.m2\repository\ant\ant\1.6.5\ant-1.6.5.jar;C:\Users\catherine_ovalle\.m2\repository\net\sourceforge\cssparser\cssparser\0.9.11\cssparser-0.9.11.jar;C:\Users\catherine_ovalle\.m2\repository\ant\ant-launcher\1.6.5\ant-launcher-1.6.5.jar;C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm-util\5.0.3\asm-util-5.0.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm-tree\5.0.3\asm-tree-5.0.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm-commons\5.0.3\asm-commons-5.0.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-annotations\8.1.12.v20130726\jetty-annotations-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-plus\8.1.12.v20130726\jetty-plus-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\javax.transaction\1.1.1.v201105210645\javax.transaction-1.1.1.v201105210645.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-webapp\8.1.12.v20130726\jetty-webapp-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-xml\8.1.12.v20130726\jetty-xml-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-servlet\8.1.12.v20130726\jetty-servlet-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-security\8.1.12.v20130726\jetty-security-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-server\8.1.12.v20130726\jetty-server-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\javax.servlet\3.0.0.v201112011016\javax.servlet-3.0.0.v201112011016.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\javax.annotation\1.1.0.v201108011116\javax.annotation-1.1.0.v201108011116.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\org.objectweb.asm\3.1.0.v200803061910\org.objectweb.asm-3.1.0.v200803061910.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-servlets\8.1.12.v20130726\jetty-servlets-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-continuation\8.1.12.v20130726\jetty-continuation-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-client\8.1.12.v20130726\jetty-client-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-http\8.1.12.v20130726\jetty-http-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-io\8.1.12.v20130726\jetty-io-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-util\8.1.12.v20130726\jetty-util-8.1.12.v20130726.jar;C:\Users\catherine_ovalle\.m2\repository\org\jdesktop\swing-worker\1.1\swing-worker-1.1.jar;C:\Users\catherine_ovalle\.m2\repository\commons-codec\commons-codec\1.8\commons-codec-1.8.jar;C:\Users\catherine_ovalle\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\james\apache-mime4j\0.6\apache-mime4j-0.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\httpcomponents\httpclient\4.3.1\httpclient-4.3.1.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\httpcomponents\httpcore\4.3\httpcore-4.3.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\httpcomponents\httpmime\4.3.1\httpmime-4.3.1.jar;C:\Users\catherine_ovalle\.m2\repository\net\sourceforge\nekohtml\nekohtml\1.9.19\nekohtml-1.9.19.jar;C:\Users\catherine_ovalle\.m2\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar;C:\Users\catherine_ovalle\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\catherine_ovalle\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\catherine_ovalle\.m2\repository\com\ibm\icu\icu4j\50.1.1\icu4j-50.1.1.jar;C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client-compiler-deps\1.2.0\vaadin-client-compiler-deps-1.2.0.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.asm\3.1.1.RELEASE\org.springframework.asm-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.beans\3.1.1.RELEASE\org.springframework.beans-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.expression\3.1.1.RELEASE\org.springframework.expression-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\aopalliance\com.springsource.org.aopalliance\1.0.0\com.springsource.org.aopalliance-1.0.0.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.transaction\3.1.1.RELEASE\org.springframework.transaction-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.context.support\3.1.1.RELEASE\org.springframework.context.support-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.web\3.1.1.RELEASE\org.springframework.web-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\org\springframework\security\spring-security-core\3.1.1.RELEASE\spring-security-core-3.1.1.RELEASE.jar;C:\Users\catherine_ovalle\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.6\poi-ooxml-schemas-3.6.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\xmlbeans\xmlbeans\2.3.0\xmlbeans-2.3.0.jar;C:\Users\catherine_ovalle\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\geronimo\specs\geronimo-stax-api_1.0_spec\1.0\geronimo-stax-api_1.0_spec-1.0.jar;C:\Users\catherine_ovalle\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\catherine_ovalle\.m2\repository\commons-net\commons-net\1.0.0\commons-net-1.0.0.jar;C:\Users\catherine_ovalle\.m2\repository\net\sourceforge\jexcelapi\jxl\2.6.12\jxl-2.6.12.jar;C:\Users\catherine_ovalle\.m2\repository\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;C:\Users\catherine_ovalle\.m2\repository\javax\xml\jaxrpc-api\1.1\jaxrpc-api-1.1.jar;C:\Users\catherine_ovalle\.m2\repository\org\safehaus\jug\jug\2.0.0\jug-2.0.0-asl.jar;C:\Users\catherine_ovalle\.m2\repository\org\apache\axis\axis\1.4\axis-1.4.jar;C:\Users\catherine_ovalle\.m2\repository\jboss\jbossall-client\3.2.3\jbossall-client-3.2.3.jar;C:\Users\catherine_ovalle\.m2\repository\javax\json\javax.json-api\1.0\javax.json-api-1.0.jar;C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bcprov-jdk15\1.45\bcprov-jdk15-1.45.jar;C:\Users\catherine_ovalle\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar;C:\Users\catherine_ovalle\.m2\repository\net\sf\jasperreports\jasperreports\4.1.1\jasperreports-4.1.1.jar;C:\Users\catherine_ovalle\.m2\repository\commons-digester\commons-digester\1.7\commons-digester-1.7.jar;C:\Users\catherine_ovalle\.m2\repository\com\lowagie\itext\2.1.7\itext-2.1.7.jar;C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bctsp-jdk14\1.38\bctsp-jdk14-1.38.jar;C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bcprov-jdk14\1.38\bcprov-jdk14-1.38.jar;C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bcmail-jdk14\1.38\bcmail-jdk14-1.38.jar;C:\Users\catherine_ovalle\.m2\repository\jfree\jcommon\1.0.15\jcommon-1.0.15.jar;C:\Users\catherine_ovalle\.m2\repository\jfree\jfreechart\1.0.12\jfreechart-1.0.12.jar;C:\Users\catherine_ovalle\.m2\repository\org\codehaus\castor\castor\1.2\castor-1.2.jar;C:\Users\catherine_ovalle\.m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar;C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\popupbutton\2.5.0\popupbutton-2.5.0.jar;C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\target\classes
+-aspectpath
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.aspects\3.1.1.RELEASE\org.springframework.aspects-3.1.1.RELEASE.jar
+-d
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\target\classes
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\Autorizacion.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\BasicData.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\DateRangeItems.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\OpcionModulo.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\Pagina.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\Perfil.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\Permiso.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\TwoObjectsDate.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\domain\Usuario.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\BasicDataMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\OpcionModuloMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\PaginaMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\PerfilMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\PermisoMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\UsuarioMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\persistence\jdbc\rowmapper\UsuarioPerfilMapper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\AbstractService.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\AbstractServiceDao.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\Auditoria.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\ReportDAO.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\HistoryRuleQuasar.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\MyAuthenticationManager.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\MyAuthenticationManagerImpl.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\MyUserDetailsService.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\MyUserDetailsServiceImpl.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\OpcionModuloService.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\OpcionModuloServiceImpl.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\service\security\QuasarPasswordEncoder.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\App.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\BaseComponent.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\BienvenidaContent.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\BreadCrumb.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\user\AdminUsuariosContent.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\user\DiccionarioContrasenas.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\user\LogAuditoria.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\user\userDetailsService.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\util\ConfirmDialog.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\util\RegexArchivosFilter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\content\util\RegexArchivosFilterName.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\CambioContrasena.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\CambioContrasenaPrincipal.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\CargaMasivaAceptaciones.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\CargaMasivaModal.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\CrearAceptaciones.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\CrearParametros.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\DescargarAdjudicacion.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\ExcelExport.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\Filtro.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\GenerarAdjudicacion.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\GenerarBoletin.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\MantenedorScb.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\ModificacionAceptaciones.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\ModificarAceptaciones.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\PagedTableContainerCustomscb.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\PagedTableCustomscb.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\RechazoAceptaciones.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\ReporteConsolidado.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\contents\test.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\DefaultTask.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\field\validator\CustomDoubleValidator.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\field\validator\CustomLongValidator.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\form\field_factory\DateRangeItemsFieldFactory.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\form\field_factory\DateRangeItemsFieldFactoryMGC.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\form\field_factory\DateRangeItemsFieldFactoryMILA.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\form\field_factory\DateRangeTwinColSelectFieldFactory.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\form\field_factory\DateRangeTwinColSelectFieldFactoryMI.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\formatter\CampoEstadoRegistroFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\formatter\CampoTimingFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\GenericContent.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\GenericTab.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\Main.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\MainView.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\MenuSection.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\Notifier.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\oferta\NumberProperty.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\oferta\NumberPropertyFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\oferta\NumberPropertyFormatterInt.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\TabBuilder.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\Task.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\AppConstants.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\ApplicationHelper.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\ApplicationHolder.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\BaseApplication.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\GenerarArchivoBoletin.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\GenerarArchivoInterfaz20.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\GenerarArchivoInterfazBackOffice.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\GenerarArchivoReporteAdjudicacion.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\security\MyPasswordValidator.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\security\VerificaFormulario.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\SpringApplicationServlet.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\VaadinApplicationObjectSupport.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\VaadinComponentFactory.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\VaadinComponentFactoryImpl.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\ui\util\ValidarCampos.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\web\security\MyCaptcha.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\web\security\MyCaptchaImpl.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\common\web\security\UrlAuthenticationFailureHandler.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\opa\reporte\service\ReporteServiceGeneral.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\opa\reporte\service\ReporteServiceGeneralImpl.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\opa\ui\reporte\ReporteAceptaciones.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\config\Constantes.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\ConfigCampoVO.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\ConfirmDialog.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\ConsultaWeb20.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\exception\ReportExecutionException.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\FileContainer.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\formatter\CampoFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\formatter\CampoTipoArchivoFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\formatter\DecimalFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\formatter\DefaultCampoFormatter.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\GeneraForma.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\GrillaService.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\JFormMD.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\PDFSource.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\QueryContainer.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\ReportService.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\ReportSource.java
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\Utiles.java
+---- Full Classpath ---
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar(3492528 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar(63576140 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar(missing)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar(658033 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar(115651 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar(3090355 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar(560713 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\classes(missing)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.aspects\3.1.1.RELEASE\org.springframework.aspects-3.1.1.RELEASE.jar(50332 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\access-bridge-64.jar(196916 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\cldrdata.jar(3860502 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\dnsns.jar(8286 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\jaccess.jar(44516 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\jfxrt.jar(18223311 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\localedata.jar(2245803 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\nashorn.jar(2023884 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\sunec.jar(41672 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\sunjce_provider.jar(277834 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\sunmscapi.jar(33143 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\sunpkcs11.jar(250131 bytes)
+C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext\zipfs.jar(68963 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client\7.5.6\vaadin-client-7.5.6.jar(18732120 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-push\7.5.6\vaadin-push-7.5.6.jar(398822 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-server\7.5.6\vaadin-server-7.5.6.jar(3404692 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-shared\7.5.6\vaadin-shared-7.5.6.jar(2361151 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-widgets\7.5.6\vaadin-widgets-7.5.6.jar(7263373 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-themes\7.5.6\vaadin-themes-7.5.6.jar(7547297 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client-compiled\7.5.6\vaadin-client-compiled-7.5.6.jar(927962 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client-compiler\7.5.6\vaadin-client-compiler-7.5.6.jar(7324371 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\customfield\1.0.0\customfield-1.0.0.jar(19863 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.core\3.1.1.RELEASE\org.springframework.core-3.1.1.RELEASE.jar(449324 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.context\3.1.1.RELEASE\org.springframework.context-3.1.1.RELEASE.jar(831068 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.aop\3.1.1.RELEASE\org.springframework.aop-3.1.1.RELEASE.jar(331471 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.aspects\3.1.1.RELEASE\org.springframework.aspects-3.1.1.RELEASE.jar(50332 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.jdbc\3.1.1.RELEASE\org.springframework.jdbc-3.1.1.RELEASE.jar(404732 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.web.servlet\3.1.1.RELEASE\org.springframework.web.servlet-3.1.1.RELEASE.jar(573701 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.test\3.1.1.RELEASE\org.springframework.test-3.1.1.RELEASE.jar(229725 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\security\spring-security-web\3.1.1.RELEASE\spring-security-web-3.1.1.RELEASE.jar(255466 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\security\spring-security-config\3.1.1.RELEASE\spring-security-config-3.1.1.RELEASE.jar(206484 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\aspectj\aspectjrt\1.6.11\aspectjrt-1.6.11.jar(116219 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\aspectj\aspectjtools\1.6.11\aspectjtools-1.6.11.jar(8918431 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\slf4j\jcl-over-slf4j\1.6.6\jcl-over-slf4j-1.6.6.jar(17289 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar(26176 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar(9711 bytes)
+C:\Users\catherine_ovalle\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar(489884 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-discovery\commons-discovery\0.2\commons-discovery-0.2.jar(71442 bytes)
+C:\Users\catherine_ovalle\.m2\repository\quartz\quartz\1.5.2\quartz-1.5.2.jar(388716 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addon\confirmdialog\2.1.3\confirmdialog-2.1.3.jar(15237 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\hsqldb\hsqldb\2.3.3\hsqldb-2.3.3.jar(1493168 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\poi\poi-ooxml\3.6\poi-ooxml-3.6.jar(412783 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\poi\poi\3.13\poi-3.13.jar(2497380 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\javaee-web-api\6.0\javaee-web-api-6.0.jar(930427 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\servlet\jstl\1.2\jstl-1.2.jar(414240 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\el\javax.el-api\2.2.4\javax.el-api-2.2.4.jar(38863 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\glassfish\javax.servlet\3.0.1\javax.servlet-3.0.1.jar(83651 bytes)
+C:\Users\catherine_ovalle\.m2\repository\net\tanesha\recaptcha4j\recaptcha4j\0.0.7\recaptcha4j-0.0.7.jar(10245 bytes)
+C:\Users\catherine_ovalle\.m2\repository\junit\junit\4.10\junit-4.10.jar(253160 bytes)
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\core\FrameQ-core\target\FrameQ-core-1.0.0-SNAPSHOT.jar(241107 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\pagedtable\0.6.5\pagedtable-0.6.5.jar(32225 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\addon\tableexport-for-vaadin\1.6.2\tableexport-for-vaadin-1.6.2.jar(98530 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\google\gwt\gwt-user\2.4.0\gwt-user-2.4.0.jar(12835476 bytes)
+C:\Users\catherine_ovalle\.m2\repository\edu\vt\middleware\vt-password\3.1.1\vt-password-3.1.1.jar(47500 bytes)
+C:\Users\catherine_ovalle\.m2\repository\edu\vt\middleware\vt-dictionary\3.0\vt-dictionary-3.0.jar(31146 bytes)
+C:\Users\catherine_ovalle\.m2\repository\edu\vt\middleware\vt-crypt\2.1.4\vt-crypt-2.1.4.jar(178491 bytes)
+C:\Users\catherine_ovalle\.m2\repository\ar\com\fdvs\DynamicJasper\4.0.2\DynamicJasper-4.0.2.jar(362672 bytes)
+C:\Users\catherine_ovalle\.m2\repository\ar\com\fdvs\DynamicJasper-core-fonts\1.0\DynamicJasper-core-fonts-1.0.jar(3092206 bytes)
+C:\Users\catherine_ovalle\.m2\repository\Axis\axis-wsdl4j\1.2.1\axis-wsdl4j-1.2.1.jar(126771 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\googlecode\juniversalchardet\juniversalchardet\1.0.3\juniversalchardet-1.0.3.jar(220813 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\vaadinworker\0.0.6\vaadinworker-0.0.6.jar(14881 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\pagingcomponent\0.9.6\pagingcomponent-0.9.6.jar(91217 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\filteringtable\0.9.15.v7\filteringtable-0.9.15.v7.jar(431317 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\w3c\css\sac\1.3\sac-1.3.jar(15808 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar(47433 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA-sources.jar(65220 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-sass-compiler\0.9.12\vaadin-sass-compiler-0.9.12.jar(529061 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\jsoup\jsoup\1.8.1\jsoup-1.8.1.jar(300845 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\external\flute\flute\1.3.0.gg2\flute-1.3.0.gg2.jar(79797 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\external\streamhtmlparser\streamhtmlparser-jsilver\0.0.10.vaadin1\streamhtmlparser-jsilver-0.0.10.vaadin1.jar(39547 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\external\google\guava\16.0.1.vaadin1\guava-16.0.1.vaadin1.jar(2306492 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-collections\commons-collections\3.1\commons-collections-3.1.jar(559366 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar(62050 bytes)
+C:\Users\catherine_ovalle\.m2\repository\ant\ant\1.6.5\ant-1.6.5.jar(1034049 bytes)
+C:\Users\catherine_ovalle\.m2\repository\net\sourceforge\cssparser\cssparser\0.9.11\cssparser-0.9.11.jar(354562 bytes)
+C:\Users\catherine_ovalle\.m2\repository\ant\ant-launcher\1.6.5\ant-launcher-1.6.5.jar(9180 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar(53231 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm-util\5.0.3\asm-util-5.0.3.jar(43296 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm-tree\5.0.3\asm-tree-5.0.3.jar(29036 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\ow2\asm\asm-commons\5.0.3\asm-commons-5.0.3.jar(41717 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-annotations\8.1.12.v20130726\jetty-annotations-8.1.12.v20130726.jar(76990 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-plus\8.1.12.v20130726\jetty-plus-8.1.12.v20130726.jar(85116 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\javax.transaction\1.1.1.v201105210645\javax.transaction-1.1.1.v201105210645.jar(29098 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-webapp\8.1.12.v20130726\jetty-webapp-8.1.12.v20130726.jar(109975 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-xml\8.1.12.v20130726\jetty-xml-8.1.12.v20130726.jar(39000 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-servlet\8.1.12.v20130726\jetty-servlet-8.1.12.v20130726.jar(102560 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-security\8.1.12.v20130726\jetty-security-8.1.12.v20130726.jar(89924 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-server\8.1.12.v20130726\jetty-server-8.1.12.v20130726.jar(354264 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\javax.servlet\3.0.0.v201112011016\javax.servlet-3.0.0.v201112011016.jar(200387 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\javax.annotation\1.1.0.v201108011116\javax.annotation-1.1.0.v201108011116.jar(26455 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\orbit\org.objectweb.asm\3.1.0.v200803061910\org.objectweb.asm-3.1.0.v200803061910.jar(221394 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-servlets\8.1.12.v20130726\jetty-servlets-8.1.12.v20130726.jar(95364 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-continuation\8.1.12.v20130726\jetty-continuation-8.1.12.v20130726.jar(21163 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-client\8.1.12.v20130726\jetty-client-8.1.12.v20130726.jar(88244 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-http\8.1.12.v20130726\jetty-http-8.1.12.v20130726.jar(96042 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-io\8.1.12.v20130726\jetty-io-8.1.12.v20130726.jar(104233 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\eclipse\jetty\jetty-util\8.1.12.v20130726\jetty-util-8.1.12.v20130726.jar(287536 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\jdesktop\swing-worker\1.1\swing-worker-1.1.jar(11103 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-codec\commons-codec\1.8\commons-codec-1.8.jar(263865 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar(185140 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar(315805 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\james\apache-mime4j\0.6\apache-mime4j-0.6.jar(345048 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\httpcomponents\httpclient\4.3.1\httpclient-4.3.1.jar(585602 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\httpcomponents\httpcore\4.3\httpcore-4.3.jar(282160 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\httpcomponents\httpmime\4.3.1\httpmime-4.3.1.jar(37078 bytes)
+C:\Users\catherine_ovalle\.m2\repository\net\sourceforge\nekohtml\nekohtml\1.9.19\nekohtml-1.9.19.jar(124915 bytes)
+C:\Users\catherine_ovalle\.m2\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar(278281 bytes)
+C:\Users\catherine_ovalle\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar(1367760 bytes)
+C:\Users\catherine_ovalle\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar(220536 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\ibm\icu\icu4j\50.1.1\icu4j-50.1.1.jar(9215806 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\vaadin\vaadin-client-compiler-deps\1.2.0\vaadin-client-compiler-deps-1.2.0.jar(13161601 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.asm\3.1.1.RELEASE\org.springframework.asm-3.1.1.RELEASE.jar(53081 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.beans\3.1.1.RELEASE\org.springframework.beans-3.1.1.RELEASE.jar(589824 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.expression\3.1.1.RELEASE\org.springframework.expression-3.1.1.RELEASE.jar(176311 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\aopalliance\com.springsource.org.aopalliance\1.0.0\com.springsource.org.aopalliance-1.0.0.jar(4615 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.transaction\3.1.1.RELEASE\org.springframework.transaction-3.1.1.RELEASE.jar(246719 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.context.support\3.1.1.RELEASE\org.springframework.context.support-3.1.1.RELEASE.jar(107225 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\org.springframework.web\3.1.1.RELEASE\org.springframework.web-3.1.1.RELEASE.jar(544291 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\springframework\security\spring-security-core\3.1.1.RELEASE\spring-security-core-3.1.1.RELEASE.jar(346990 bytes)
+C:\Users\catherine_ovalle\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar(4467 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.6\poi-ooxml-schemas-3.6.jar(3774332 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\xmlbeans\xmlbeans\2.3.0\xmlbeans-2.3.0.jar(2666695 bytes)
+C:\Users\catherine_ovalle\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar(26514 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\geronimo\specs\geronimo-stax-api_1.0_spec\1.0\geronimo-stax-api_1.0_spec-1.0.jar(28592 bytes)
+C:\Users\catherine_ovalle\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar(313898 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-net\commons-net\1.0.0\commons-net-1.0.0.jar(116083 bytes)
+C:\Users\catherine_ovalle\.m2\repository\net\sourceforge\jexcelapi\jxl\2.6.12\jxl-2.6.12.jar(725735 bytes)
+C:\Users\catherine_ovalle\.m2\repository\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar(827942 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\xml\jaxrpc-api\1.1\jaxrpc-api-1.1.jar(28492 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\safehaus\jug\jug\2.0.0\jug-2.0.0-asl.jar(31906 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\apache\axis\axis\1.4\axis-1.4.jar(1599570 bytes)
+C:\Users\catherine_ovalle\.m2\repository\jboss\jbossall-client\3.2.3\jbossall-client-3.2.3.jar(1443789 bytes)
+C:\Users\catherine_ovalle\.m2\repository\javax\json\javax.json-api\1.0\javax.json-api-1.0.jar(19754 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bcprov-jdk15\1.45\bcprov-jdk15-1.45.jar(1663318 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar(41123 bytes)
+C:\Users\catherine_ovalle\.m2\repository\net\sf\jasperreports\jasperreports\4.1.1\jasperreports-4.1.1.jar(3277924 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-digester\commons-digester\1.7\commons-digester-1.7.jar(139966 bytes)
+C:\Users\catherine_ovalle\.m2\repository\com\lowagie\itext\2.1.7\itext-2.1.7.jar(1130070 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bctsp-jdk14\1.38\bctsp-jdk14-1.38.jar(22994 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bcprov-jdk14\1.38\bcprov-jdk14-1.38.jar(1551468 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\bouncycastle\bcmail-jdk14\1.38\bcmail-jdk14-1.38.jar(192035 bytes)
+C:\Users\catherine_ovalle\.m2\repository\jfree\jcommon\1.0.15\jcommon-1.0.15.jar(309294 bytes)
+C:\Users\catherine_ovalle\.m2\repository\jfree\jfreechart\1.0.12\jfreechart-1.0.12.jar(1368681 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\codehaus\castor\castor\1.2\castor-1.2.jar(864598 bytes)
+C:\Users\catherine_ovalle\.m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar(188671 bytes)
+C:\Users\catherine_ovalle\.m2\repository\org\vaadin\addons\popupbutton\2.5.0\popupbutton-2.5.0.jar(25446 bytes)
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\target\classes(7 entries)
+---- Compiler Messages ---
+info directory classpath entry does not exist: C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar
+info zipfile classpath entry does not exist: C:\Program Files\Java\jdk1.8.0_171\jre\classes
+info Pipelining compilation
+error at (no source information available)
+C:\Users\catherine_ovalle\git\OPA_OPA2\CODIGO\OPA2\SistemaEmisiones\web\framework-web\src\main\java\com\framework\reportEngine\Utiles.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getSuperclass(BcelObjectType.java:231)
+	at org.aspectj.weaver.ReferenceType.getSuperclass(ReferenceType.java:906)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.matches(ExactAnnotationTypePattern.java:155)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.matches(ExactAnnotationTypePattern.java:96)
+	at org.aspectj.weaver.patterns.AnyWithAnnotationTypePattern.matchesExactly(AnyWithAnnotationTypePattern.java:55)
+	at org.aspectj.weaver.patterns.TypePattern.matchesStatically(TypePattern.java:132)
+	at org.aspectj.weaver.patterns.DeclareParents.match(DeclareParents.java:63)
+	at org.aspectj.weaver.patterns.DeclareParents.findMatchingNewParents(DeclareParents.java:358)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doDeclareParents(AjLookupEnvironment.java:880)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:730)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+abort ABORT -- (ClassFormatException) File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getSuperclass(BcelObjectType.java:231)
+	at org.aspectj.weaver.ReferenceType.getSuperclass(ReferenceType.java:906)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.matches(ExactAnnotationTypePattern.java:155)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.matches(ExactAnnotationTypePattern.java:96)
+	at org.aspectj.weaver.patterns.AnyWithAnnotationTypePattern.matchesExactly(AnyWithAnnotationTypePattern.java:55)
+	at org.aspectj.weaver.patterns.TypePattern.matchesStatically(TypePattern.java:132)
+	at org.aspectj.weaver.patterns.DeclareParents.match(DeclareParents.java:63)
+	at org.aspectj.weaver.patterns.DeclareParents.findMatchingNewParents(DeclareParents.java:358)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doDeclareParents(AjLookupEnvironment.java:880)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:730)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+

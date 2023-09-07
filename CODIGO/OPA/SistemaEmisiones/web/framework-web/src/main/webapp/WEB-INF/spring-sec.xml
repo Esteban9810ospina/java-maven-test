@@ -1,0 +1,43 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:sec="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+  <sec:global-method-security pre-post-annotations="enabled" />
+
+  <sec:http security="none" pattern="https://www.google.com/recaptcha/api**" />
+  <sec:http security="none" pattern="https://api.recaptcha.net/challenge**" />
+  <sec:http security="none" pattern="https://api-verify.recaptcha.net/verify**" />
+  <sec:http security="none" pattern="/VAADIN/**" />
+
+  <sec:http auto-config="true" authentication-manager-ref="authenticationManager">
+    <sec:intercept-url pattern="/start/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+    <sec:intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" />
+    <sec:form-login login-page='/start/login'
+                    login-processing-url="/j_security_check"
+                    authentication-failure-handler-ref="urlAuthenticationFailureHandler"
+                    always-use-default-target="true" />
+    
+    
+     <sec:logout invalidate-session="true" logout-url="/logout" logout-success-url="/start"/>  
+    
+<!--    <sec:session-management>
+      <sec:concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+    </sec:session-management>-->
+  </sec:http>
+
+  <bean id="urlAuthenticationFailureHandler" class="com.framework.common.web.security.UrlAuthenticationFailureHandler">
+    <property name="baseFailureUrl" value="/start/login" />
+  </bean>
+
+<!--  <bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder"></bean>-->
+  <bean id="passwordEncoder" class="com.framework.common.service.security.QuasarPasswordEncoder"></bean>
+
+  <!-- For verifying CAPTCHA fields -->
+  <bean id="captcha" class="com.framework.common.web.security.MyCaptchaImpl" />
+
+</beans>

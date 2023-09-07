@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/framework">
+  <Resource abandonWhenPercentageFull="50" 
+            auth="Container" driverClassName="com.mysql.jdbc.Driver" 
+            jdbcInterceptors="ResetAbandonedTimer" logAbandoned="true" 
+            logValidationErrors="true" maxActive="200" maxIdle="60" 
+            maxWait="10000" name="jdbc/frameworkDB" 
+            removeAbandoned="true" removeAbandonedTimeout="30" 
+            suspectTimeout="20" type="javax.sql.DataSource"/>
+</Context>
