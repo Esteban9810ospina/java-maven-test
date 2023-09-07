@@ -11,6 +11,11 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.6
           
       - name: Publish package
         run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/core/FrameQ-core/pom.xml
