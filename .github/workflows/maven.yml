@@ -16,7 +16,10 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.6.3
-          
+
+      - name: Change DNS to Cloudflare
+        run: /usr/bin/echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo tee /etc/resolv.conf
+        
       - name: Publish package
         run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/core/FrameQ-core/pom.xml
         env:
