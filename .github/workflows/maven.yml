@@ -26,6 +26,6 @@ jobs:
             ${{ runner.os }}-maven-
           
       - name: Publish package
-        run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/core/FrameQ-core/pom.xml
+        run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/web/framework-web/pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
