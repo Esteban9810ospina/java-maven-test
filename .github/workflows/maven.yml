@@ -17,6 +17,14 @@ jobs:
         with:
           maven-version: 3.8.6
           
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+          
       - name: Publish package
         run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/core/FrameQ-core/pom.xml
         env:
