@@ -15,7 +15,7 @@ jobs:
       - name: Set up Maven version
         uses: stCarolas/setup-maven@v4.5
         with:
-          maven-version: 3.6.3
+          maven-version: 3.8.8
 
       - name: Add hosts to /etc/hosts
         run: |
