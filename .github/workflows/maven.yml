@@ -16,7 +16,20 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.6.3
-          
+
+      - name: Add hosts to /etc/hosts
+        run: |
+          sudo echo "146.75.124.215 repo.maven.apache.org" | sudo tee -a /etc/hosts  
+      
+      - name: Cache Maven packages
+        uses: actions/cache@v2.1.4
+        with:
+          path: DEPENDENCIA/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      
+      - uses: s4u/maven-settings-action@v2.8.0
+        
       - name: Publish package
         run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/core/FrameQ-core/pom.xml
         env:
