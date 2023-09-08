@@ -14,6 +14,13 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>FrameQ-core</name>
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub OWNER Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/Esteban9810ospina/java-maven-test</url>
+   </repository>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>javax.servlet</groupId>
