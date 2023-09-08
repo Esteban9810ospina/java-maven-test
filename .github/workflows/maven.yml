@@ -27,6 +27,8 @@ jobs:
           path: DEPENDENCIA/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      
+      - uses: s4u/maven-settings-action@v2.8.0
         
       - name: Publish package
         run: mvn -B package --file CODIGO/OPA/SistemaEmisiones/core/FrameQ-core/pom.xml
